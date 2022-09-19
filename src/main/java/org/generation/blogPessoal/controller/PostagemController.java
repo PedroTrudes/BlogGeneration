@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.generation.blogPessoal.model.Postagem;
 import org.generation.blogPessoal.repository.PostagemRepository;
 import org.generation.blogPessoal.repository.TemaRepository;
+import org.generation.blogPessoal.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,8 +32,9 @@ public class PostagemController {
 	
 	@Autowired
 	private PostagemRepository postagemRepository;
-	
+	@Autowired
 	private TemaRepository temaRepository;
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getall(){
